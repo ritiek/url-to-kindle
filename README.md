@@ -15,7 +15,7 @@ We need to first download the code on Kindle, open kterm on your kindle (or opti
 
 ```
 [kterm]# cd /mnt/us/
-[us]# curl -o https://raw.githubusercontent.com/ritiek/url-to-mobi-kindle/master/url_to_mobi.py -o url_to_mobi.py
+[us]# curl https://raw.githubusercontent.com/ritiek/url-to-mobi-kindle/master/url_to_mobi.py -o url_to_mobi.py
 [us]# python url_to_mobi.py -h
 usage: url_to_mobi.py [-h] -f FILENAME [-t TITLE] [-a AUTHOR] URL
 
