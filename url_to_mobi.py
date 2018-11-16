@@ -1,4 +1,5 @@
 import requests
+import shutil
 import time
 import json
 import argparse
@@ -24,9 +25,9 @@ class Downloader:
         print(download_link)
         print("")
         print("Saving as {filename} ...".format(filename=filename))
-        download_response = requests.get(download_link)
+        response = requests.get(download_link, stream=True)
         with open(filename, "wb") as fout:
-            fout.write(download_response.content)
+            shutil.copyfileobj(response.raw, fout)
 
 
 class CreateWorkspace:
