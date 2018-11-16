@@ -1,6 +1,6 @@
 # url-to-mobi-kindle
 
-This python script uses https://ebook.online-convert.com/convert-to-mobi to convert a URL to MOBI. The script is made to be Python 2.7 compatible so it can run directly on a Kindle using any terminal emulator.
+This python script uses https://ebook.online-convert.com/convert-to-mobi/ to convert a webpage from URL to MOBI. The script is made to be Python 2.7 compatible and only uses built-in libraries that come with Kindle python so it can be directly run on a Kindle using a terminal emulator.
 
 ## Pre-requisites
 
