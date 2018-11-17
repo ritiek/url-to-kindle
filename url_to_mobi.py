@@ -116,7 +116,7 @@ class CreateWorkspace:
             time.sleep(3)
 
 
-def get_arguments(raw_args=None):
+def _get_arguments(raw_args=None):
     parser = argparse.ArgumentParser(
         description="Convert a webpage from URL to MOBI via ebook.online-convert.com, designed for (jailbroken) Kindles",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
@@ -132,8 +132,8 @@ def get_arguments(raw_args=None):
     return parsed
 
 
-def command_line():
-    args = get_arguments()
+def _command_line():
+    args = _get_arguments()
     workspace = CreateWorkspace()
     workspace.add_job(args.url)
     completed_job = workspace.start_job(
@@ -143,4 +143,4 @@ def command_line():
 
 
 if __name__ == "__main__":
-    command_line()
+    _command_line()
