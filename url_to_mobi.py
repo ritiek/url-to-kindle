@@ -118,7 +118,7 @@ class CreateWorkspace:
 
 def _get_arguments(raw_args=None):
     parser = argparse.ArgumentParser(
-        description="Convert a webpage from URL to MOBI via ebook.online-convert.com, designed for (jailbroken) Kindles",
+        description="Convert a webpage, PDF, etc. from URL to MOBI via ebook.online-convert.com, designed for (jailbroken) Kindles",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument("url", metavar="URL", help="webpage url to download as MOBI")
