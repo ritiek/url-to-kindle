@@ -16,7 +16,7 @@ We need to first download the code on Kindle, open kterm on your kindle (or opti
 ### Push to Kindle (via https://pushtokindle.fivefilters.org/)
 ```
 [kterm]# cd /mnt/us/
-[us]# curl https://raw.githubusercontent.com/ritiek/url-to-mobi-kindle/master/pushtokindle.py -o pushtokindle.py
+[us]# curl https://raw.githubusercontent.com/ritiek/url-to-kindle/master/pushtokindle.py -o pushtokindle.py
 ```
 
 Modify the values for `TO` and `FROM` in `pushtokindle.py` to mimic your approved Kindle personal documents e-mail.
@@ -28,11 +28,12 @@ via PushToKindle service:
 ```
 The webpage should appear as a document on your Kindle homescreen shortly after running the command.
 
+This script will push the document to your Kindle device irrespective of the device the script is run on.
 
 ### URL to MOBI (via https://ebook.online-convert.com/)
 ```
 [kterm]# cd /mnt/us/
-[us]# curl https://raw.githubusercontent.com/ritiek/url-to-mobi-kindle/master/urltomobi.py -o urltomobi.py
+[us]# curl https://raw.githubusercontent.com/ritiek/url-to-kindle/master/urltomobi.py -o urltomobi.py
 [us]# python urltomobi.py -h
 usage: urltomobi.py [-h] -f FILENAME [-t TITLE] [-a AUTHOR] URL
 
