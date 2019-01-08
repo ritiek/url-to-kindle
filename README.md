@@ -13,11 +13,28 @@ This python script uses https://ebook.online-convert.com/convert-to-mobi/ to con
 
 We need to first download the code on Kindle, open kterm on your kindle (or optionally [SSH to your kindle](https://www.mobileread.com/forums/showthread.php?t=204942)) and run:
 
+### Push to Kindle (via https://pushtokindle.fivefilters.org/)
 ```
 [kterm]# cd /mnt/us/
-[us]# curl https://raw.githubusercontent.com/ritiek/url-to-mobi-kindle/master/url_to_mobi.py -o url_to_mobi.py
-[us]# python url_to_mobi.py -h
-usage: url_to_mobi.py [-h] -f FILENAME [-t TITLE] [-a AUTHOR] URL
+[us]# curl https://raw.githubusercontent.com/ritiek/url-to-mobi-kindle/master/pushtokindle.py -o pushtokindle.py
+```
+
+Modify the values for `TO` and `FROM` in `pushtokindle.py` to mimic your approved Kindle personal documents e-mail.
+
+Now for example, to download https://www.joelonsoftware.com/2005/12/29/the-perils-of-javaschools-2/ to your Kindle
+via PushToKindle service:
+```
+[us]# python pushtokindle.py https://www.joelonsoftware.com/2005/12/29/the-perils-of-javaschools-2/
+```
+The webpage should appear as a document on your Kindle homescreen shortly after running the command.
+
+
+### URL to MOBI (via https://ebook.online-convert.com/)
+```
+[kterm]# cd /mnt/us/
+[us]# curl https://raw.githubusercontent.com/ritiek/url-to-mobi-kindle/master/urltomobi.py -o urltomobi.py
+[us]# python urltomobi.py -h
+usage: urltomobi.py [-h] -f FILENAME [-t TITLE] [-a AUTHOR] URL
 
 Convert a webpage from URL to MOBI via ebook.online-convert.com, designed for
 (jailbroken) Kindles
@@ -37,7 +54,7 @@ optional arguments:
 
 For example, to download https://medium.com/@abhishekj/an-intro-to-git-and-github-1a0e2c7e3a2f as MOBI, run:
 ```
-[us]# python url_to_mobi.py -f /mnt/us/documents/learn_git.mobi https://medium.com/@abhishekj/an-intro-to-git-and-github-1a0e2c7e3a2f
+[us]# python urltomobi.py -f /mnt/us/documents/learn_git.mobi https://medium.com/@abhishekj/an-intro-to-git-and-github-1a0e2c7e3a2f
 Create Job:
 {"id":"541f4fd5-eb99-43ca-80f3-d74f96d878f9","token":"149adda449dec8b0ebdee8d81020fb61","upload_url":"https:\/\/www38.online-convert.com\/dl\/web2\/upload-file\/541f4fd5-eb99-43ca-80f3-d74f96d878f9","server":"https:\/\/www38.online-convert.com\/dl\/web2","conversion":[{"id":"eaa14601-a801-49b8-ba56-2d84ab88b909","target":"mobi","category":"ebook","options":{"reader":null,"download_password":null,"allow_multiple_outputs":false,"preset":null,"title":null,"author":null,"border":null,"encoding":null,"ascii":false,"enable_heuristics":false,"base_font_size":null},"metadata":[],"output_target":[]}]}
 
