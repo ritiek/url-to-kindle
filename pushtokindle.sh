@@ -21,7 +21,7 @@ get_domain_type() {
 }
 
 get_domain_type $to
-to_prefix=$(echo $to | cut -f1 -d"@")
+to_prefix="${to%@*}"
 
 curl -X POST \
     --data-urlencode "from=$from" \
